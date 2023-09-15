@@ -1,11 +1,9 @@
-import ButtonAppBar from "../components/navbar/Navbar";
-import MapWithSidebar from "../components/navbar/map-with-side-bar/MapWithSidebar";
+import Maps from "./map";
 
 const HomePage = () => {
   return (
-    <div style={{ height: "100vh"}}>
-      <ButtonAppBar />
-      <MapWithSidebar />
+    <div style={{ height: "100vh" }}>
+      <Maps />
     </div>
   );
 };

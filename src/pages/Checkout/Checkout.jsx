@@ -8,6 +8,36 @@ import Box from '@mui/material/Box';
 import ItemCard from "../../components/productCheckout/ProductCard";
 import ServiceCard from "../../components/serviceCheckout/serviceCheckout";
 
+const productData = [
+  {
+    id: 1,
+    name: "BLUE TYGA SUNSCREEN JACKET",
+    description:"SPF 50+ fabric technology: The fabric of the jacket is treated with a special sunscreen that blocks 98% of harmful UV rays. This helps to protect your skin from sunburn, and skin tanning.",
+    price:"₹1,499"
+  },
+  {
+    id: 2,
+    title: "Walking Shoes",
+    description:"Height increasing non marking Rubber Outsole made with light weight compound and orthopedic memory foam shoes which provides extra comfort to your feet with a perfect grip",
+    price:"₹1,099"
+  },
+];
+
+const serviceData = [
+  {
+    id: 1,
+    name: "BLUE TYGA SUNSCREEN JACKET",
+    description:"SPF 50+ fabric technology: The fabric of the jacket is treated with a special sunscreen that blocks 98% of harmful UV rays. This helps to protect your skin from sunburn, and skin tanning.",
+  
+  },
+  {
+    id: 2,
+    title: "Walking Shoes",
+    description:"Height increasing non marking Rubber Outsole made with light weight compound and orthopedic memory foam shoes which provides extra comfort to your feet with a perfect grip",
+    price:"₹1,099"
+  },
+];
+
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -61,20 +91,20 @@ const Checkout = () => {
           </Tabs>
         </Box>
         <CustomTabPanel value={value} index={0}>
-          Products
+        {productData.map((p) => (
           <ItemCard item={{
-    name: 'Jacket',
-    description: 'abc',
-    price: '123'
-  }} />
+            key:p.id,
+            name: p.name,
+            description: p.description,
+            price: p.price}} /> ))}
         </CustomTabPanel>
         <CustomTabPanel value={value} index={1}>
-          Services
+        {serviceData.map((s) => (
           <ServiceCard item={{
-    name: 'Jacket',
-    description: 'abc',
-    price: '123'
-  }} />
+            id:s.id,
+    name: s.name,
+    description: s.description,
+  }} />))}
         </CustomTabPanel>
       </Box>
       </div>
