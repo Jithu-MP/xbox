@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './style.scss';
+
 const Checkbox = ({title}) => {
   // Use state to manage the checkbox's checked state
   const [isChecked, setIsChecked] = useState(false);
