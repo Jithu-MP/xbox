@@ -1,14 +1,11 @@
-import Button from '@mui/material/Button';
-import PinDropIcon from '@mui/icons-material/PinDrop';
 import ButtonAppBar from "../components/navbar/Navbar";
-import CheckBox from "../components/checkbox/Checkbox";
-import Popup from "../components/popup/popup";
+import MapWithSidebar from "../components/navbar/map-with-side-bar/MapWithSidebar";
 
 const HomePage = () => {
   return (
-    <div style={{ background: "red", height: "100vh" }}>
+    <div style={{ height: "100vh"}}>
       <ButtonAppBar />
-      <Popup/>
+      <MapWithSidebar />
     </div>
   );
 };
