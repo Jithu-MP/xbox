@@ -1,23 +1,11 @@
 import ButtonAppBar from "../components/navbar/Navbar";
-import Popup from "../components/popup/popup";
-import React from "react";
-import ItemCard from "../components/productCheckout/ProductCard";
-const cardData = [
-  {
-    name: 'Jacket',
-    description: 'abc',
-    price: '123'
-  }
-];
+import MapWithSidebar from "../components/navbar/map-with-side-bar/MapWithSidebar";
 
 const HomePage = () => {
   return (
-    <div style={{ background: "red", height: "100vh" }}>
-        <ItemCard item={{
-    name: 'Jacket',
-    description: 'abc',
-    price: '123'
-  }} />
+    <div style={{ height: "100vh"}}>
+      <ButtonAppBar />
+      <MapWithSidebar />
     </div>
   );
 };

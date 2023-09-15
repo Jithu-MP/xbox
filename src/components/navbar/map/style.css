@@ -3,3 +3,25 @@
     width: 80vw;
     padding: 30px;
 }
+
+.map .pin img{
+    width: 34px;
+    height: 53px;
+    position: absolute;
+    top: 261px;
+    left: 443px;
+    z-index: 999;
+}
+
+.map .pin img:hover{
+    width: 34px;
+    height: 53px;
+    position: absolute;
+    top: 261px;
+    left: 443px;
+    z-index: 99;
+}
+
+.map-image{
+    z-index: 1;
+}
