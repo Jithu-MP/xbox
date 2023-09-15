@@ -15,7 +15,8 @@ const App = () => {
       <Route path="*" element={<Navigate to="/home" />} />
     </Routes>
     // <Example/>
-  );
-};
+
+  )}
+
 
 export default App;
