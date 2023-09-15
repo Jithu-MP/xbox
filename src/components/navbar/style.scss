@@ -1,0 +1,58 @@
+
+.navbar{
+    background-color:  #FFFFFF !important;
+    width:1,440px;
+    height: 80px;
+    top: 3381px;
+    left: 4079px;
+    padding: 32px, 80px, 32px, 80px;   
+}
+
+.button{
+    color: #6B7A85 !important;
+    width: 130px;
+    height: 45px;
+    padding: 16px, 32px, 16px, 32px;
+    border-radius: 80px !important;
+    gap: 8px;
+    font-size: 14px;
+}
+
+.toolbar{
+   margin-top: 20px;
+    justify-content:space-between;
+    display: flex;   
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.l{
+    width: 40px;
+    height: 40px;
+}
+
+.brandName{
+   width: 66px;
+   height: 40px;
+   font-size: 24px;
+   font-weight: 900;
+   line-height: 40px;
+   letter-spacing: 0em;
+   text-align: left;
+   color:  #191825;
+   margin-left: 15px;
+}
+
+.login{
+    background-color:  #E7E7E7 !important;
+    color: #6B7A85 !important;
+    font-size: 14px;
+    width: 130px;
+    height: 45px;
+    padding: 16px, 32px, 16px, 32px;
+    border-radius: 80px !important;
+    gap: 8px;
+}
