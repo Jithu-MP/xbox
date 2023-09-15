@@ -1,6 +1,8 @@
 import React from "react";
 import { Card, CardMedia, CardContent, CardActionArea, Button } from "@mui/material";
 
+import dummyimage from "../../assets/images/dummyimage.jpg"
+
 const ItemCard = ({ item }) => {
   const [quantity, setQuantity] = React.useState(1);
 
@@ -15,28 +17,36 @@ const ItemCard = ({ item }) => {
   };
 
   return (
-    <Card className = "product">
-      <CardContent>
+    <Card className="product-wrapper">
+      <CardMedia
+        className="card-image-wrapper"
+        sx={{ height: 92 , width: 92}}
+        image={dummyimage}
+        title="Dummy Image"
+      />
+      <CardContent className="card-wrapper">
         <h2>{item.name}</h2>
         <p>{item.description}</p>
-        <span>Price: ${item.price}</span>
-        <div className="quantity-section">
-          <Button variant="outlined" onClick={handleIncrement}>
-            +
-          </Button>
-          <span>{quantity}</span>
-          <Button variant="outlined" onClick={handleDecrement}>
-            -
-          </Button>
+        <span>Price: {item.price}</span>
+        <div className="button-wrapper">
+          <div className="quantity-section">
+            <Button variant="outlined" onClick={handleIncrement}>
+              +
+            </Button>
+            <span>{quantity}</span>
+            <Button variant="outlined" onClick={handleDecrement}>
+              -
+            </Button>
+          </div>
+          <div className="primary-button">
+            <Button variant="contained" color="primary">
+              Buy
+            </Button>
+            <Button variant="contained" color="error">
+              Rent
+            </Button>
+          </div>
         </div>
-        <CardActionArea>
-          <Button variant="contained" color="primary">
-            Buy
-          </Button>
-          <Button variant="contained" color="error">
-            Rent
-          </Button>
-        </CardActionArea>
       </CardContent>
     </Card>
   );

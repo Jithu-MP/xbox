@@ -2,10 +2,9 @@
 .navbar{
     background-color:  #FFFFFF !important;
     width:1,440px;
-    height: 80px;
-    top: 3381px;
-    left: 4079px;
-    padding: 32px, 80px, 32px, 80px;   
+    height: 100px;
+    box-shadow: none !important;
+    border-bottom: 1px solid black;
 }
 
 .button{
@@ -19,7 +18,7 @@
 }
 
 .toolbar{
-   margin-top: 20px;
+    height: 100%;
     justify-content:space-between;
     display: flex;   
 }
@@ -27,6 +26,7 @@
 .logo{
     display: flex;
     align-items: center;
+    text-decoration: none;
 }
 
 .l{
@@ -47,12 +47,12 @@
 }
 
 .login{
-    background-color:  #E7E7E7 !important;
-    color: #6B7A85 !important;
+    background-color:  #5D50C6 !important;
+    color: #ffffff !important;
     font-size: 14px;
-    width: 130px;
+    width: auto;
     height: 45px;
-    padding: 16px, 32px, 16px, 32px;
+    padding: 16px 32px !important;
     border-radius: 80px !important;
     gap: 8px;
 }

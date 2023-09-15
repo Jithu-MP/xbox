@@ -8,7 +8,7 @@ const Map = ({ visibleMap }) => {
   const mapData = [
     {
       id: 1,
-      image: "public/assets/map1.png",
+      image: "public/assets/map1.jpg",
       places: [
         {
           id: 1,
@@ -21,7 +21,7 @@ const Map = ({ visibleMap }) => {
           left: "700px",
         },
         {
-            id: 2,
+            id: 3,
             top: "500px",
             left: "150px",
           },
@@ -42,7 +42,7 @@ const Map = ({ visibleMap }) => {
           left: "700px",
         },
         {
-            id: 2,
+            id: 3,
             top: "200px",
             left: "-100px",
           },
@@ -63,7 +63,7 @@ const Map = ({ visibleMap }) => {
           left: "700px",
         },
         {
-            id: 2,
+            id: 3,
             top: "500px",
             left: "150px",
           },

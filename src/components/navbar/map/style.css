@@ -1,7 +1,7 @@
 .map img{
-    height:92vh;
-    width: 80vw;
-    padding: 30px;
+    height:auto;
+    width: 100%;
+    padding: 0 30px;
 }
 
 .map .pin img{

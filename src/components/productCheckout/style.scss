@@ -1,4 +1,4 @@
-.product{
+.product-wrapper{
     width: 35px;
     height: 120.73px;
     top: 122px;
@@ -7,4 +7,18 @@
     border: 1px;
     border-color: black;
     gap: 11.13px;
+    display: flex;
+
+}
+
+.css-bhp9pd-MuiPaper-root-MuiCard-root {
+    display: flex !important;
+}
+
+.card-wrapper {
+    width: 33.33% !important;
+}
+
+.css-bhp9pd-MuiPaper-root-MuiCard-root {
+    display: flex !important;
 }

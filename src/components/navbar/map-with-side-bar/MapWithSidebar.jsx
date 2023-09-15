@@ -1,7 +1,7 @@
 import Sidebar from "../sidebar/Sidebar";
 import Map from "../map/Map";
 import { useState } from "react";
-import "./style.css";
+import "./style.scss";
 import { Button } from "@mui/material";
 
 const MapWithSidebar = () => {

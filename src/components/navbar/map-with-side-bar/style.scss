@@ -1,0 +1,27 @@
+.map-with-sidebar{
+    display: flex;
+    max-width: 1308px;
+    padding: 24px;
+    margin: 0 auto;
+    position: relative;
+
+    .map-and-continue{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 70%;
+
+        .map {
+            width: 100%;
+            height: auto;
+
+            img {
+
+            }
+        }
+    }
+
+    .sidebar {
+        width: 30%;
+    }
+}

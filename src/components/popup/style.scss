@@ -7,7 +7,7 @@
     background-color: white;
     z-index: 2;
     position: absolute;
-
+    z-index: 10;
   }
   
   .card img {
@@ -21,7 +21,7 @@
   
   .card h2 {
     margin: 0;
-    font-size: 18px;
+    font-size: 24px;
   }
   
   .card p {
@@ -29,21 +29,53 @@
     font-size: 14px;
   }
 
+  .card p  .checkbox{
+    background-color: white;
+  }
+
   .c{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 64px;
+  }
+
+  .p{
+    width: 50%;
+    height: auto;
+  }
+
+  .t{
+    width: 50%;
+  }
+
+  .t .location {
     display: flex;
     align-items: center;
   }
 
-  .p{
-    width: 295px;
-    height: 265px;
-
+  .t .location span {
+    padding: 0;
   }
 
-  .t{
-    width: 249px;
-height: 237px;
-display: block;
-justify: space-between;
+  .t h2 {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding-top: -5px;
+  }
 
+  .t p {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .t span {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
   }

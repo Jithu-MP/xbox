@@ -1,8 +1,0 @@
-.map-with-sidebar{
-    display: flex;
-}
-.map-and-continue{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}

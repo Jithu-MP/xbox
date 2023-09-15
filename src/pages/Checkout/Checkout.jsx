@@ -7,6 +7,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import ItemCard from "../../components/productCheckout/ProductCard";
 import ServiceCard from "../../components/serviceCheckout/serviceCheckout";
+import ButtonAppBar from "../../components/navbar/Navbar";
 
 const productData = [
   {
@@ -17,6 +18,21 @@ const productData = [
   },
   {
     id: 2,
+    name: "BLUE TYGA SUNSCREEN JACKET",
+    title: "Walking Shoes",
+    description:"Height increasing non marking Rubber Outsole made with light weight compound and orthopedic memory foam shoes which provides extra comfort to your feet with a perfect grip",
+    price:"₹1,099"
+  },
+  {
+    id: 3,
+    name: "BLUE TYGA SUNSCREEN JACKET",
+    title: "Walking Shoes",
+    description:"Height increasing non marking Rubber Outsole made with light weight compound and orthopedic memory foam shoes which provides extra comfort to your feet with a perfect grip",
+    price:"₹1,099"
+  },
+  {
+    id: 4,
+    name: "BLUE TYGA SUNSCREEN JACKET",
     title: "Walking Shoes",
     description:"Height increasing non marking Rubber Outsole made with light weight compound and orthopedic memory foam shoes which provides extra comfort to your feet with a perfect grip",
     price:"₹1,099"
@@ -28,13 +44,11 @@ const serviceData = [
     id: 1,
     name: "BLUE TYGA SUNSCREEN JACKET",
     description:"SPF 50+ fabric technology: The fabric of the jacket is treated with a special sunscreen that blocks 98% of harmful UV rays. This helps to protect your skin from sunburn, and skin tanning.",
-  
   },
   {
     id: 2,
-    title: "Walking Shoes",
+    name: "BLUE TYGA SUNSCREEN JACKET",
     description:"Height increasing non marking Rubber Outsole made with light weight compound and orthopedic memory foam shoes which provides extra comfort to your feet with a perfect grip",
-    price:"₹1,099"
   },
 ];
 
@@ -50,8 +64,8 @@ function CustomTabPanel(props) {
       {...other}
     >
       {value === index && (
-        <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
+        <Box sx={{ p: 3 }} className="box-box">
+          {children}
         </Box>
       )}
     </div>
@@ -77,7 +91,11 @@ const Checkout = () => {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+
+
   return (
+    <div className="container">
+    <ButtonAppBar />
     <div className="checkout">
       <Box sx={{ width: "100%" }}>
         <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
@@ -102,11 +120,12 @@ const Checkout = () => {
         {serviceData.map((s) => (
           <ServiceCard item={{
             id:s.id,
-    name: s.name,
-    description: s.description,
-  }} />))}
+            name: s.name,
+            description: s.description,
+          }} />))}
         </CustomTabPanel>
       </Box>
+      </div>
       </div>
   );
 };

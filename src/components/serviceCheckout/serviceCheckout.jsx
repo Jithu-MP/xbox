@@ -1,6 +1,8 @@
 import React from "react";
 import { Card, CardMedia, CardContent, CardActionArea, Button } from "@mui/material";
 
+import dummyimage from "../../assets/images/dummyimage.jpg"
+
 const ServiceCard = ({ item }) => {
   const [quantity, setQuantity] = React.useState(1);
 
@@ -15,15 +17,21 @@ const ServiceCard = ({ item }) => {
   };
 
   return (
-    <Card className = "product">
-      <CardContent>
+    <Card className = "product-wrapper">
+      <CardMedia
+        className="card-image-wrapper"
+        sx={{ height: 92 , width: 92}}
+        image={dummyimage}
+        title="Dummy Image"
+      />
+      <CardContent className="card-wrapper">
         <h2>{item.name}</h2>
         <p>{item.description}</p>
-        <CardActionArea>
+        <div className="button-wrapper">
           <Button variant="contained" color="primary">
             Book
           </Button>
-        </CardActionArea>
+        </div>
       </CardContent>
     </Card>
   );
