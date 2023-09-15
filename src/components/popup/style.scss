@@ -1,0 +1,46 @@
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 500px;
+    background-color: white;
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .card-content {
+    padding: 16px;
+  }
+  
+  .card h2 {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  .card p {
+    margin: 8px 0;
+    font-size: 14px;
+  }
+
+  .c{
+    display: flex;
+    align-items: center;
+  }
+
+  .p{
+    width: 295px;
+    height: 265px;
+
+  }
+
+  .t{
+    width: 249px;
+height: 237px;
+display: block;
+justify: space-between;
+
+  }
