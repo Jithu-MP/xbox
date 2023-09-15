@@ -1,0 +1,35 @@
+.day-card {
+  width: 80%;
+  height: 120px;
+  border-radius: 12px;
+  background-color: #3170fe24;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 20px;
+  flex-direction: column;
+  padding-left: 20px;
+}
+
+.day-card:hover{
+    background-color: #3170fe3b;
+    cursor: pointer;
+}
+
+.day {
+  color: #000;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.location {
+  color: #000;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
