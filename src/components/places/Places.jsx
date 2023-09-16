@@ -15,11 +15,11 @@ const Places = ({ top, left }) => {
     setPopupVisible(false);
   };
   return (
-    <div style={{transition: "all 0.3s ease-out"}}
+    <div 
       className="pin "
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      style={{ position: "absolute", top: top, left: left }}
+      style={{ transition: "all 0.3s ease-out",position: "absolute", top: top, left: left }}
     >
       {isPopupVisible && <Popup top={"-20px"} left={"250px"} />}
       <img src="public/assets/pin.png" alt="pin" />

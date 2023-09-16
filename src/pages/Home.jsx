@@ -1,5 +1,5 @@
 import ButtonAppBar from "../components/navbar/Navbar";
-
+import React,{ useState } from 'react';
 import './style.scss';
 
 import cardimage from '../assets/images/booking.png';
@@ -11,9 +11,19 @@ import calendericon from '../assets/images/calender-icon.png';
 import couponicon from '../assets/images/coupon-icon.png';
 import { useNavigate } from "react-router-dom";
 import Popup from "../components/popup/popup";
+import FileUploadPopup from "../components/fileupload/fileupload"
+import Modal from '@mui/material/Modal';
 
 
 const HomePage = () => {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+  const [isComponentVisible, setComponentVisible] = useState(false);
+
+  const toggleComponentVisibility = () => {
+    setComponentVisible(!isComponentVisible);
+  };
   const navigate = useNavigate()
   return (
     <>
@@ -24,7 +34,9 @@ const HomePage = () => {
           <div className="heading-wrapper">
             <h1>Travel <span>Hassle Free</span> to the top destinations</h1>
             <p>Entrust us with your itinerary, and prepare for an epic journey meticulously crafted just for you.</p>
-            <div onClick={() => navigate('/map')} className="cta-Button">Get Started</div>
+            <div onClick={handleOpen} className="cta-Button">Get Started </div>
+            <Modal open={open} className="modal"
+        onClose={handleClose} ><FileUploadPopup /></Modal>
           </div>
           <div className="hero-image">
             <img src={drawkittravel} alt="Banner image" />
