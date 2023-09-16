@@ -3,7 +3,10 @@ import  "./style.scss"
 import { useNavigate } from 'react-router-dom';
 
 const FileUploadPopup = () => {
+
+  
     const navigate = useNavigate()
+    
     return (
       <div  className='f'>
 

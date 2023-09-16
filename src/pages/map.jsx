@@ -3,7 +3,7 @@ import MapWithSidebar from "../components/navbar/map-with-side-bar/MapWithSideba
 
 const Maps = () => {
   return (
-    <div style={{ height: "100vh"}}>
+    <div className="container">
       <ButtonAppBar />
       <MapWithSidebar />
     </div>

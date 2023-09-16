@@ -8,34 +8,30 @@ import Box from '@mui/material/Box';
 import ItemCard from "../../components/productCheckout/ProductCard";
 import ServiceCard from "../../components/serviceCheckout/serviceCheckout";
 import ButtonAppBar from "../../components/navbar/Navbar";
+import { Button } from "@mui/material";
+import { useNavigate } from "react-router-dom";
+
 
 const productData = [
   {
     id: 1,
-    name: "BLUE TYGA SUNSCREEN JACKET",
+    name: "RAIN JACKET",
     description:"SPF 50+ fabric technology: The fabric of the jacket is treated with a special sunscreen that blocks 98% of harmful UV rays. This helps to protect your skin from sunburn, and skin tanning.",
     price:"₹1,499"
   },
   {
     id: 2,
-    name: "BLUE TYGA SUNSCREEN JACKET",
+    name: "Minimalist Sunscreen SPF 50 Lightweight with Multi-Vitamins",
     title: "Walking Shoes",
-    description:"Height increasing non marking Rubber Outsole made with light weight compound and orthopedic memory foam shoes which provides extra comfort to your feet with a perfect grip",
-    price:"₹1,099"
+    description:"HA light weight, moisturiser-meets-sunscreen. This broad spectrum SPF 50 with PA++++ rating, has a very light texture that spreads easily & disappears leaving behind a natural, moisturized, non-shiny look. Loaded with Vitamins A, B, E & F that help repair skin and minimize damage caused by UV exposure",
+    price:"₹399"
   },
   {
     id: 3,
-    name: "BLUE TYGA SUNSCREEN JACKET",
+    name: "RAAYA Leather Winter Woolen Gloves For Girls And Women",
     title: "Walking Shoes",
-    description:"Height increasing non marking Rubber Outsole made with light weight compound and orthopedic memory foam shoes which provides extra comfort to your feet with a perfect grip",
-    price:"₹1,099"
-  },
-  {
-    id: 4,
-    name: "BLUE TYGA SUNSCREEN JACKET",
-    title: "Walking Shoes",
-    description:"Height increasing non marking Rubber Outsole made with light weight compound and orthopedic memory foam shoes which provides extra comfort to your feet with a perfect grip",
-    price:"₹1,099"
+    description:"Premium PU Leather- Extremely soft and comfortable to wear; wearable and durable. Exquisite Craft- Reliable quality! Brings you the best wearing experience and perfectly highlights your good taste",
+    price:"₹349"
   },
 ];
 
@@ -92,41 +88,46 @@ const Checkout = () => {
     setValue(newValue);
   };
 
+  const navigate = useNavigate()
+
 
   return (
     <div className="container">
-    <ButtonAppBar />
-    <div className="checkout">
-      <Box sx={{ width: "100%" }}>
-        <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-          <Tabs
-            value={value}
-            onChange={handleChange}
-            aria-label="basic tabs"
-          >
-            <Tab label="Products" {...a11yProps(0)} />
-            <Tab label="Services" {...a11yProps(1)} />
-          </Tabs>
+      <ButtonAppBar />
+      <div className="checkout">
+        <Box sx={{ width: "100%" }}>
+          <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+            <Tabs
+              value={value}
+              onChange={handleChange}
+              aria-label="basic tabs"
+            >
+              <Tab label="Products" {...a11yProps(0)} />
+              <Tab label="Services" {...a11yProps(1)} />
+            </Tabs>
+          </Box>
+          <CustomTabPanel value={value} index={0}>
+          {productData.map((p) => (
+            <ItemCard item={{
+              key:p.id,
+              name: p.name,
+              description: p.description,
+              price: p.price}} /> ))}
+          </CustomTabPanel>
+          <CustomTabPanel value={value} index={1}>
+          {serviceData.map((s) => (
+            <ServiceCard item={{
+              id:s.id,
+              name: s.name,
+              description: s.description,
+            }} />))}
+          </CustomTabPanel>
         </Box>
-        <CustomTabPanel value={value} index={0}>
-        {productData.map((p) => (
-          <ItemCard item={{
-            key:p.id,
-            name: p.name,
-            description: p.description,
-            price: p.price}} /> ))}
-        </CustomTabPanel>
-        <CustomTabPanel value={value} index={1}>
-        {serviceData.map((s) => (
-          <ServiceCard item={{
-            id:s.id,
-            name: s.name,
-            description: s.description,
-          }} />))}
-        </CustomTabPanel>
-      </Box>
       </div>
-      </div>
+      <Button variant="contained" color="primary" onClick={() => {navigate('/payment')}}>
+          Continue
+      </Button>
+    </div>
   );
 };
 

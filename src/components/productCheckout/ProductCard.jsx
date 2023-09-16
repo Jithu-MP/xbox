@@ -40,7 +40,7 @@ const ItemCard = ({ item }) => {
           </div>
           <div className="primary-button">
             <Button variant="contained" color="primary">
-              Buy
+              Add to cart
             </Button>
             <Button variant="contained" color="error">
               Rent

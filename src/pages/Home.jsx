@@ -13,6 +13,7 @@ import { useNavigate } from "react-router-dom";
 import Popup from "../components/popup/popup";
 import FileUploadPopup from "../components/fileupload/fileupload"
 import Modal from '@mui/material/Modal';
+import Footer from "../components/footer/Footer";
 
 
 const HomePage = () => {
@@ -29,7 +30,6 @@ const HomePage = () => {
     <>
       <div className="container">
       <ButtonAppBar />
-      {/* <Popup/> */}
         <div className="main-wrapper">
           <div className="heading-wrapper">
             <h1>Travel <span>Hassle Free</span> to the top destinations</h1>
@@ -51,7 +51,7 @@ const HomePage = () => {
             <div className="valuecard">
               <img src={cardimage} alt="" />
               <h3>Enhanced Planning</h3>
-              <span>Smart Travel Shopping: Your Personalized Essentials Guide</span>
+              <span>Our system empowers you to plan your trip with precision and efficiency</span>
             </div>
             <div className="valuecard">
               <img src={cardimage} alt="" />
@@ -60,8 +60,8 @@ const HomePage = () => {
             </div>
             <div className="valuecard">
               <img src={cardimage} alt="" />
-              <h3>Weather Forecast</h3>
-              <span>Smart Travel Shopping: Your Personalized Essentials Guide</span>
+              <h3>Enriched user experience</h3>
+              <span>Effortless trip planning, unbeatable user experience.</span>
             </div>
           </div>
         </div>
@@ -89,25 +89,27 @@ const HomePage = () => {
               <div className="feature-card">
                 <img src={calendericon} alt="" />
                 <div className="text">
-                  <span>We offer best recommendations</span>
-                  <p>Shop travel gears through expert recommendations </p>
+                  <span>Schedule your trip</span>
+                  <p>It has roots in a piece of classical</p>
                 </div>
               </div>
-              <div className="feature-card">
+              {/* <div className="feature-card">
                 <img src={couponicon} alt="" />
                 <div className="text">
                   <span>We offer best recommendations</span>
                   <p>Shop travel gears through expert recommendations </p>
                 </div>
-              </div>
+              </div> */}
             </div>
             <div className="image-wrapper">
               <img src={drawkittransport} alt="" />
             </div>
           </div>
         </div>
+
         <div className="footer"></div>
       </div>
+      <Footer />
     </>
   );
 };

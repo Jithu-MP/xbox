@@ -3,7 +3,7 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
 import './style.scss';
-import logo from '../../assets/images/Vectorlogo_xbox.png';
+import logo from '../../assets/images/Vectorlogo_xbox.svg';
 import FileUploadPopup from "../fileupload/fileupload";
 import Modal from '@mui/material/Modal';
 import React from 'react';

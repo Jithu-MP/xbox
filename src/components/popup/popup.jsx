@@ -14,7 +14,7 @@ const cardData = [
   },
   {
     id: 3,
-    title: "Cap",
+    title: "Sunscreen",
   },
   {
     id: 4,
