@@ -1,7 +1,6 @@
 .map img{
     height:auto;
     width: 100%;
-    padding: 0 30px;
 }
 
 .map .pin img{
@@ -10,7 +9,9 @@
     position: absolute;
     top: 261px;
     left: 443px;
-    z-index: 999;
+    z-index: 1;
+    padding-top: 50px;
+    margin-top: -60px;
 }
 
 .map .pin img:hover{
