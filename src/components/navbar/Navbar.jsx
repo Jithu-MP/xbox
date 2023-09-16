@@ -10,6 +10,7 @@ import React from 'react';
 import {useLocation } from 'react-router-dom';
 
 export default function ButtonAppBar() {
+  const location = useLocation();
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
