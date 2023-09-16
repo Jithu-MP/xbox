@@ -38,13 +38,13 @@ const productData = [
 const serviceData = [
   {
     id: 1,
-    name: "BLUE TYGA SUNSCREEN JACKET",
-    description:"SPF 50+ fabric technology: The fabric of the jacket is treated with a special sunscreen that blocks 98% of harmful UV rays. This helps to protect your skin from sunburn, and skin tanning.",
+    name: "LAUNDRY",
+    description:"Get your laundry done hassle free while travelling",
   },
   {
     id: 2,
-    name: "BLUE TYGA SUNSCREEN JACKET",
-    description:"Height increasing non marking Rubber Outsole made with light weight compound and orthopedic memory foam shoes which provides extra comfort to your feet with a perfect grip",
+    name: "CLINICAL SERVICES",
+    description:"Travel with less worries, your health concerns got covered here",
   },
 ];
 
